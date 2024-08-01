@@ -28,7 +28,7 @@ const Main: React.FC = () => {
 
   return (
     <main className="bg-slate-300 w-screen min-h-[calc(100vh-90px)]">
-      {/* Main banner */}
+      {/* Banner */}
       <div
         className="w-full h-[calc(100vh-90px)] bg-cover bg-center bg-no-repeat"
         style={{
