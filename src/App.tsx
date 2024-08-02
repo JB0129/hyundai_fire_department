@@ -15,7 +15,7 @@ import Road from "./pages/Road";
 const App: React.FC = () => {
   return (
     <div className="w-screen">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
