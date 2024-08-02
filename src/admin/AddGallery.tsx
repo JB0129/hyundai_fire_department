@@ -11,7 +11,7 @@ const AddGallery: React.FC = () => {
 
   const postGallery = () => {
     return axios
-      .post("http://localhost:8080/gallery", {
+      .post("http://34.127.89.168/gallery", {
         title,
         contents,
         image: imgFile[0],
@@ -34,7 +34,7 @@ const AddGallery: React.FC = () => {
 
   const addGallery = (id: number, idx: number) => {
     return axios
-      .patch(`http://localhost:8080/gallery/${id}/add`, {
+      .patch(`http://34.127.89.168/gallery/${id}/add`, {
         image: imgFile[idx],
       })
       .then((data) => {

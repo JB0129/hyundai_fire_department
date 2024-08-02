@@ -15,7 +15,7 @@ const Gallery: React.FC = () => {
 
   const getGallerys = () => {
     return axios
-      .get(`http://localhost:8080/gallery?page=${isPage}`)
+      .get(`http://34.127.89.168/gallery?page=${isPage}`)
       .then((res) => {
         console.log(res.data);
         setData(res.data.data);
