@@ -13,7 +13,7 @@ const Gallery: React.FC = () => {
 
   const getGallery = () => {
     return axios
-      .get(`http://34.127.89.168/gallery/${id}`)
+      .get(`http://34.127.89.168:8080/gallery/${id}`)
       .then((res) => {
         console.log(res.data);
         setData(res.data.data);
@@ -28,13 +28,16 @@ const Gallery: React.FC = () => {
 
   const deleteGallery = () => {
     return axios
-      .delete(`http://34.127.89.168/gallery/${id}`)
+      .delete(`http://34.127.89.168:8080/gallery/${id}`)
       .then((res) => {
         console.log(res.data);
         alert("해당 글이 삭제되었습니다.");
         navigate("/gallery");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+        alert("오류가 발생했습니다.")
+      });
   };
 
   return (
@@ -68,7 +71,7 @@ const Gallery: React.FC = () => {
         <div className="flex justify-end items-center w-full mt-[12px] mb-[100px] pr-[12px]">
           <button
             onClick={() => setLogin(true)}
-            className="py-[10px] px-[16px] broder rounded-lg bg-red-200 text-white text-[12px]"
+            className="py-[10px] px-[16px] broder rounded-lg bg-red-300 hover:bg-red-200 text-white text-[12px] cursor-pointer"
           >
             글 삭제
           </button>

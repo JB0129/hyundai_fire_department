@@ -9,9 +9,6 @@ module.exports = {
         intro: "rgb(42,59,67)",
         footer: "rgb(5,13,57)",
       },
-      aspectRatio: {
-        "2/1": "2 / 1",
-      },
     },
   },
   plugins: [],

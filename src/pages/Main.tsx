@@ -159,7 +159,9 @@ const Main: React.FC = () => {
                 <span className="my-[8px]">
                   스프링클러는 주변에 물을 뿌리는 살수장치로
                 </span>
-                <span className="my-[8px]">화재의 초기 소화 목적으로 사용됩니다.</span>
+                <span className="my-[8px]">
+                  화재의 초기 소화 목적으로 사용됩니다.
+                </span>
               </div>
             </div>
           </div>
@@ -181,7 +183,9 @@ const Main: React.FC = () => {
                 <span className="my-[8px]">
                   방염은 연소하기 쉬운 재질에 발화 및 화염확산을
                 </span>
-                <span className="my-[8px]">지연시키는 가공처리 방법을 말합니다.</span>
+                <span className="my-[8px]">
+                  지연시키는 가공처리 방법을 말합니다.
+                </span>
                 <span className="my-[8px]">
                   화재의 발생빈도가 높고 화재 시 인적 또는 물적 피해가
                 </span>

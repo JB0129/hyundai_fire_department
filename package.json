@@ -46,6 +46,5 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.4"
-  },
-  "homepage": "https://apple9710.github.io/jj"
+  }
 }

@@ -37,9 +37,10 @@ const Road: React.FC = () => {
         </ul>
       </nav>
 
-      <section className="flex flex-col justify-center items-center w-full mt-[30px] px-[200px] pb-[100px] z-[-10]">
+      <section className="flex flex-col justify-center items-center w-full mt-[30px] px-[200px] pb-[100px]">
         <Map
           center={{ lat: 37.646411, lng: 127.1251 }}
+          draggable={true}
           level={2}
           className="w-full h-[450px]"
         >

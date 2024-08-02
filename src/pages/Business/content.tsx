@@ -1,11 +1,11 @@
 export const Content = ({ data }: any) => {
   return (
-    <div className="flex flex-col justify-start items-center w-full leading-6">
-      <img src={data.image} alt="" className="w-[800px] h-[450px] mb-[100px]" />
-      <div className="flex flex-col justify-start items-start">
-        <div className="mb-[40px] text-main">
+    <div className="flex flex-col justify-start items-center w-full leading-6 mb-[100px]">
+      {data.image && <img src={data.image} alt="" className="w-[800px] h-[450px] mb-[100px]" />}
+      <div className="flex flex-col justify-start items-start w-full">
+        <div className="mb-[20px] ml-[32px] text-main">
           <div className="mb-[24px] text-[32px] font-bold ">{data.title}</div>
-          <div className="pl-[10px]">- {data.description}</div>
+          {data.description && <div className="pl-[10px]">- {data.description}</div>}
         </div>
         <ul className="flex flex-col justify-start items-start w-full">
           {data.contents?.map((obj: any, index: number) => (

@@ -11,7 +11,7 @@ const AddGallery: React.FC = () => {
 
   const postGallery = () => {
     return axios
-      .post("http://34.127.89.168/gallery", {
+      .post("http://34.127.89.168:8080/gallery", {
         title,
         contents,
         image: imgFile[0],
@@ -34,7 +34,7 @@ const AddGallery: React.FC = () => {
 
   const addGallery = (id: number, idx: number) => {
     return axios
-      .patch(`http://34.127.89.168/gallery/${id}/add`, {
+      .patch(`http://34.127.89.168:8080/gallery/${id}/add`, {
         image: imgFile[idx],
       })
       .then((data) => {
@@ -145,7 +145,7 @@ const AddGallery: React.FC = () => {
           <input
             type="submit"
             value="등록"
-            className="mt-[20px] py-[10px] px-[16px] broder rounded-lg bg-main text-white"
+            className="mt-[20px] py-[10px] px-[16px] broder rounded-lg bg-main text-white cursor-pointer"
           />
         </form>
       </section>

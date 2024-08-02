@@ -8,7 +8,7 @@ const Introduce: React.FC = () => {
   };
 
   const tabMenu = [
-    { id: "intro", text: "인삿말(CEO/회사)" },
+    { id: "intro", text: "인사말(CEO/회사)" },
     { id: "license", text: "등록증/면허증" },
   ];
 
@@ -123,12 +123,12 @@ const Introduce: React.FC = () => {
         {menu === "license" && (
           <div className="flex mb-[100px]">
             <img
-              src="/introduce.jpg"
+              src="/Lisence1.jpg"
               alt="사업자등록증"
               className="w-[430px] h-[580px] mr-[84px]"
             />
             <img
-              src="/introduce.jpg"
+              src="/Lisence2.jpg"
               alt="소방시설관리업등록증"
               className="w-[430px] h-[580px]"
             />

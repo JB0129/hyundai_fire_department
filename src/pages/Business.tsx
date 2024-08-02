@@ -17,7 +17,7 @@ const Business: React.FC = () => {
   ];
 
   return (
-    <main className="flex flex-col justify-start items-center">
+    <main className="flex flex-col justify-start items-center w-full">
       <img
         src="/Business_banner.png"
         alt="사업분야 banner"
@@ -47,7 +47,12 @@ const Business: React.FC = () => {
         {menu === "certificate" && <Content data={businessData.certificate} />}
         {menu === "facility" && <Content data={businessData.facility} />}
         {menu === "sprinkler" && <Content data={businessData.sprinkler} />}
-        {menu === "retardant" && <Content data={businessData.retardant} />}
+        {menu === "retardant" && (
+          <>
+            <Content data={businessData.retardant} />
+            <Content data={businessData.retardant2} />
+          </>
+        )}
       </section>
     </main>
   );

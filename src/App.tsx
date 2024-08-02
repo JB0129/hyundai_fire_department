@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
@@ -12,10 +12,56 @@ import Question from "./pages/Question";
 import AddGallery from "./admin/AddGallery";
 import Road from "./pages/Road";
 
+const router = createBrowserRouter([
+  {
+    element: (
+      <>
+        <Header />
+        <Outlet />
+        <Footer />
+      </>
+    ),
+    children: [
+      {
+        path: "/",
+        element: <Main />,
+      },
+      {
+        path: "/introduce",
+        element: <Introduce />,
+      },
+      {
+        path: "/business",
+        element: <Business />,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "/gallery/:id",
+        element: <GalleryDetail />,
+      },
+      {
+        path: "/gallery/post",
+        element: <AddGallery />,
+      },
+      {
+        path: "/question",
+        element: <Question />,
+      },
+      {
+        path: "/road",
+        element: <Road />,
+      },
+    ],
+  },
+]);
+
 const App: React.FC = () => {
   return (
     <div className="w-screen">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Main />} />
@@ -28,7 +74,8 @@ const App: React.FC = () => {
           <Route path="/road" element={<Road />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <RouterProvider router={router} />
     </div>
   );
 };
