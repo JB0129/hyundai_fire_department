@@ -69,7 +69,7 @@ const Gallery: React.FC = () => {
             <span>시공갤러리가 비어있습니다.</span>
           </div>
         ) : (
-          <ul className="grid grid-cols-3 grid-row-2 gap-x-[60px] gap-y-[40px] place-items-center">
+          <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-row-2 gap-x-[60px] gap-y-[40px] place-items-center">
             {isData.map((el: any) => (
               <li
                 key={el.id}
@@ -88,7 +88,7 @@ const Gallery: React.FC = () => {
             ))}
           </ul>
         )}
-        <div className="flex justify-end items-center w-full mt-[100px]">
+        <div className="lg:flex justify-end items-center w-full mt-[100px] hidden">
           <button
             onClick={() => setLogin(true)}
             className="py-[10px] px-[16px] broder rounded-lg bg-main text-white"

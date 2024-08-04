@@ -61,8 +61,8 @@ const Question: React.FC = () => {
         </ul>
       </nav>
 
-      <section className="flex justify-center items-end mt-[60px] mb-[200px]">
-        <div className="flex flex-col justify-start items-start mr-[20px] p-[60px] border rounded-3xl shadow-[1px_2px_30px_-10px_rgba(0,0,0,0.3)]">
+      <section className="flex flex-col xl:flex-row xl:justify-center justify-start items-center xl:items-start mt-[60px] mb-[200px]">
+        <div className="flex flex-col justify-start items-start w-[600px] xl:mr-[40px] xl:mb-0 mb-[40px] p-[60px] border rounded-3xl shadow-[1px_2px_30px_-10px_rgba(0,0,0,0.3)]">
           <img
             src="/Logo_Large.png"
             alt="명함 로고"
@@ -81,27 +81,27 @@ const Question: React.FC = () => {
         <form
           ref={formRef}
           onSubmit={(e) => onSendForm(e)}
-          className="flex flex-col justify-start items-end p-[32px] border rounded-3xl shadow-[1px_2px_30px_-10px_rgba(0,0,0,0.3)]"
+          className="flex flex-col justify-start items-end w-[600px] p-[32px] border rounded-3xl shadow-[1px_2px_30px_-10px_rgba(0,0,0,0.3)]"
         >
           <div className="flex justify-start items-center my-[12px]">
             <label className="whitespace-nowrap">보내시는 분</label>
             <input
               name="name"
-              className="w-[600px] ml-[16px] py-[8px] pl-[12px] bg-slate-200"
+              className="w-[400px] ml-[16px] py-[8px] pl-[12px] bg-slate-200"
             />
           </div>
           <div className="flex justify-start items-center my-[12px]">
             <label className="whitespace-nowrap">이메일</label>
             <input
               name="email"
-              className="w-[600px] ml-[16px] py-[8px] pl-[12px] bg-slate-200"
+              className="w-[400px] ml-[16px] py-[8px] pl-[12px] bg-slate-200"
             />
           </div>
           <div className="flex justify-start items-start my-[12px]">
             <label className="whitespace-nowrap mt-[10px]">내용</label>
             <textarea
               name="message"
-              className="w-[600px] h-[300px] ml-[16px] p-[12px] resize-none bg-slate-200"
+              className="w-[400px] h-[300px] ml-[16px] p-[12px] resize-none bg-slate-200"
             />
           </div>
           <button className="border rounded-xl py-[12px] px-[20px] bg-main text-white">

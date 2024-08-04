@@ -17,7 +17,7 @@ export const Content = ({ data }: any) => {
                 <button className="border rounded-full min-w-[56px] min-h-[56px] mr-[25px] bg-main text-white">
                   {index + 1}
                 </button>
-                <div className="">{obj.content}</div>
+                <div>{obj.content}</div>
               </div>
               {obj.subContent !== null && (
                 <ul className="mt-[10px] mb-[20px] pl-[80px]">

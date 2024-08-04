@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         main: "rgb(37,47,99)",
+        partner: "rgb(5,15,67)",
         intro: "rgb(42,59,67)",
         footer: "rgb(5,13,57)",
       },

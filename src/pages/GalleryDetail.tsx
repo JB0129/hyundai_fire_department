@@ -36,7 +36,7 @@ const Gallery: React.FC = () => {
       })
       .catch((err) => {
         console.error(err);
-        alert("오류가 발생했습니다.")
+        alert("오류가 발생했습니다.");
       });
   };
 

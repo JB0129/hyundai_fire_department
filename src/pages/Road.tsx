@@ -37,14 +37,14 @@ const Road: React.FC = () => {
         </ul>
       </nav>
 
-      <section className="flex flex-col justify-center items-center w-full mt-[30px] px-[200px] pb-[100px]">
+      <section className="flex flex-col justify-center items-center w-full mt-[30px] px-[60px] lg:px-[120px] xl:px-[200px] pb-[100px]">
         <Map
-          center={{ lat: 37.646411, lng: 127.1251 }}
+          center={{ lat: 37.284365, lng: 126.818577 }}
           draggable={true}
           level={2}
           className="w-full h-[450px]"
         >
-          <MapMarker position={{ lat: 37.646411, lng: 127.1251 }}></MapMarker>
+          <MapMarker position={{ lat: 37.284365, lng: 126.818577 }}></MapMarker>
         </Map>
         <div className="w-full mt-[20px]">
           경기도 화성시 수노을중앙로 142 센타프라자 507호
