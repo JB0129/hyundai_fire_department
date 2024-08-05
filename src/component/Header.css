@@ -28,9 +28,10 @@ div#menu {
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        /* border: 1px solid black; */
         background-color: white;
         width: 80%;
         height: 100vh;
+        overflow-y: auto;
+
     }
 }

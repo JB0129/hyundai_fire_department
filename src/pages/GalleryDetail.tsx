@@ -50,10 +50,11 @@ const Gallery: React.FC = () => {
 
       <section className="flex flex-col justify-start items-center my-[100px]">
         <div className="flex flex-col justify-start items-center border rounded-2xl shadow-[1px_2px_30px_-10px_rgba(0,0,0,0.3)] p-[52px]">
-          <div className="flex justify-between items-end w-full border-b-2 border-solid border-main mb-[10px] pb-[10px]">
+          <div className="flex justify-between items-end w-full border-b-2 border-solid border-main mb-[30px] pb-[10px]">
             <div className="text-[24px] font-bold">{isData.title}</div>
             <div className="text-[12px]">{isData.createdate}</div>
           </div>
+          <div className="w-full my-[20px] px-[24px]">{isData.contents}</div>
           <ul className="flex flex-col justify-start items-center">
             {isData.images?.map((img: any, idx: number) => (
               <li key={idx} className="m-[24px]">
@@ -65,7 +66,6 @@ const Gallery: React.FC = () => {
               </li>
             ))}
           </ul>
-          <div className="w-full my-[10px] px-[24px]">{isData.content}</div>
         </div>
 
         <div className="flex justify-end items-center w-full mt-[12px] mb-[100px] pr-[12px]">

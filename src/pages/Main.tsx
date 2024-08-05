@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import main1 from "../assets/image/main1.png";
 import main_intro from "../assets/image/main_intro.png";
-import main_intro_bg from "../assets/image/main_intro_bg.png";
 import main_partner from "../assets/image/main_partner.png";
 import { Map, MapMarker } from "react-kakao-maps-sdk";
 import { ReactComponent as Arrow } from "../assets/image/Arrow.svg";
@@ -16,7 +15,7 @@ import { useNavigate } from "react-router-dom";
 const Main: React.FC = () => {
   const navigate = useNavigate();
 
-  const [swiperIndex, setSwiperIndex] = useState(0); // -> 페이지네이션용
+  // const [swiperIndex, setSwiperIndex] = useState(0); // -> 페이지네이션용
   const [swiper, setSwiper] = useState<SwiperClass>(); // -> 슬라이드용
   const handlePrev = () => {
     swiper?.slidePrev();
@@ -24,6 +23,8 @@ const Main: React.FC = () => {
   const handleNext = () => {
     swiper?.slideNext();
   };
+
+  const [more, setMore] = useState<boolean>(false);
 
   return (
     <main className="bg-slate-300 w-screen min-h-[calc(100vh-90px)]">
@@ -34,13 +35,13 @@ const Main: React.FC = () => {
           backgroundImage: `url(${main1})`,
         }}
       >
-        <div className="font-bold text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px] mb-[32px]">
+        <div className="font-bold text-[16px] sm:text-[20px] md:text-[24px] lg:text-[36px] xl:text-[36px] mb-[32px]">
           소방안전의 독보적인 기술력과 전문성으로 고객 맞춤 서비스를 실현합니다.
         </div>
-        <div className="font-bold text-[32px] sm:text-[40px] md:text-[42px] lg:text-[52px] xl:text-[64px] mb-[20px]">
+        <div className="font-bold text-[32px] sm:text-[40px] md:text-[42px] lg:text-[60px] xl:text-[64px] mb-[20px]">
           안전을 위한 최선의 첫걸음,
         </div>
-        <div className="font-bold text-[32px] sm:text-[40px] md:text-[42px] lg:text-[52px] xl:text-[64px]">
+        <div className="font-bold text-[32px] sm:text-[40px] md:text-[42px] lg:text-[60px] xl:text-[64px]">
           현대소방과의 동행입니다
         </div>
       </div>
@@ -53,9 +54,9 @@ const Main: React.FC = () => {
           backgroundImage: `url(${main_intro})`,
         }}
       >
-        <div className="flex flex-col justify-center items-center h-[250px] text-white text-[20px]">
-          <div className="font-bold text-[48px] mb-[24px]">안녕하십니까</div>
-          <div className="font-bold text-[32px] mb-[60px]">
+        <div className="flex flex-col justify-center items-center h-[250px] text-white text-[28px]">
+          <div className="font-bold text-[64px] mb-[24px]">안녕하십니까</div>
+          <div className="font-bold text-[48px] mb-[60px]">
             현대소방 입니다.
           </div>
           <div className="mb-[16px]">
@@ -84,7 +85,7 @@ const Main: React.FC = () => {
           className="absolute w-[60px] h-[60px] right-[36px] cursor-pointer z-20 hidden md:block"
         />
         <Swiper
-          onActiveIndexChange={(e: any) => setSwiperIndex(e.realIndex)}
+          // onActiveIndexChange={(e: any) => setSwiperIndex(e.realIndex)}
           onSwiper={(e: any) => {
             setSwiper(e);
           }}
@@ -100,7 +101,6 @@ const Main: React.FC = () => {
         >
           <SwiperSlide>
             <div className="flex flex-col-reverse justify-start items-center lg:flex-row lg:justify-center lg:items-end min-w-[100vw] px-[30px]">
-              {/* <div className="flex justify-center items-end min-w-[100vw] px-[30px]"> */}
               <img
                 src="/Main_Info1.png"
                 alt=""
@@ -221,7 +221,9 @@ const Main: React.FC = () => {
           backgroundImage: `url(${main_partner})`,
         }}
       >
-        <div className="font-bold text-[48px] mb-[80px]">PARTNER</div>
+        <div className="font-bold text-[64px] lg:text-[48px] mb-[80px]">
+          PARTNER
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[40px] xl:flex xl:justify-center xl:items-center place-items-center w-full">
           <div className="flex justify-center items-center w-[240px] h-[80px] bg-white mx-[8px]">
             <img
@@ -270,7 +272,9 @@ const Main: React.FC = () => {
 
       {/* Contact us */}
       <div className="bg-white flex flex-col justify-center items-center w-full h-[calc(100vh-90px)] px-[60px] lg:px-[120px] xl:px-[200px]">
-        <div className="font-bold text-[48px] mb-[30px]">Contact us</div>
+        <div className="font-bold text-[64px] lg:text-[48px] mb-[30px]">
+          Contact us
+        </div>
         <Map
           center={{ lat: 37.284365, lng: 126.818577 }}
           // draggable={false}
@@ -279,6 +283,43 @@ const Main: React.FC = () => {
         >
           <MapMarker position={{ lat: 37.284365, lng: 126.818577 }}></MapMarker>
         </Map>
+      </div>
+
+      <div className="hidden fixed bottom-[24px] right-[24px] xl:flex flex-col justify-end items-center">
+        {more && (
+          <>
+            <img
+              src="/Ring_icon.png"
+              alt="전화걸기"
+              className="w-[72px] h-[72px] my-[8px] cursor-pointer"
+              onClick={() => {
+                document.location.href = "tel:010-3153-7503";
+              }}
+            />
+            <img
+              src="/Kakao_icon.png"
+              alt="오픈 카카오톡"
+              className="w-[72px] h-[72px] my-[8px] cursor-pointer"
+              onClick={() => window.open("https://open.kakao.com/o/so0efoeg")}
+            />
+            <img
+              src="/Blog_icon.png"
+              alt="네이버 블로그"
+              className="w-[72px] h-[72px] my-[8px] cursor-pointer"
+              onClick={() => window.open("https://blog.naver.com/aabd95")}
+            />
+          </>
+        )}
+        <button
+          onClick={() => setMore(!more)}
+          className="flex justify-center items-center w-[72px] h-[72px] rounded-full bg-partner"
+        >
+          {more ? (
+            <span className="text-white text-[36px]">&times;</span>
+          ) : (
+            <span className="text-white text-[32px] rotate-45">&times;</span>
+          )}
+        </button>
       </div>
     </main>
   );
