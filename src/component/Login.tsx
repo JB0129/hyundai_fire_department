@@ -6,7 +6,7 @@ const Login = ({ close, login }: any) => {
 
   const handleLogin = () => {
     if (!inputValue) return setErrMsg("비밀번호를 입력해주세요.");
-    if (inputValue === "guseothqkd0801" || inputValue === "현대소방0801") {
+    if (inputValue === "5is9&jxa@@" || inputValue === "5ㅑㄴ9&ㅓㅌㅁ@@") {
       return login();
     } else {
       return setErrMsg("비밀번호를 잘못 입력하셨습니다.");

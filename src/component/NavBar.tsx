@@ -15,8 +15,9 @@ const NavBar: React.FC<OwnProps> = ({ list }) => {
 
   return (
     <div className="absolute top-[90px] left-[-27px] flex flex-col justify-start items-center border-t-2 border-solid border-main rounded-b-xl bg-white overflow-hidden">
-      {list.map((el: any) => (
+      {list.map((el: any, idx: number) => (
         <button
+          key={idx}
           onClick={() => navigate(el.id)}
           className="w-[160px] py-[20px] whitespace-nowrap text-[16px] hover:bg-slate-200"
         >

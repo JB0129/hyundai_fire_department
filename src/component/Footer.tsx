@@ -7,11 +7,23 @@ const Footer: React.FC = () => {
         <div className="flex flex-col justify-start items-start xl:flex-row xl:items-center mb-[32px]">
           <span className="mx-[20px] xl:my-0 my-[12px]">대표자: 이동훈</span>
 
+          <span className="xl:my-0 my-[12px] font-bold hidden xl:block">|</span>
+
           <span className="mx-[20px] xl:my-0 my-[12px]">TEL: 031-506-7503</span>
 
-          <span className="mx-[20px] xl:my-0 my-[12px]">MOB: 010-3153-7503</span>
+          <span className="xl:my-0 my-[12px] font-bold hidden xl:block">|</span>
+          
+          <span className="mx-[20px] xl:my-0 my-[12px]">
+            MOB: 010-3153-7503
+          </span>
 
-          <span className="mx-[20px] xl:my-0 my-[12px]">E-mail: E.aabd26@naver.com</span>
+          <span className="xl:my-0 my-[12px] font-bold hidden xl:block">|</span>
+
+          <span className="mx-[20px] xl:my-0 my-[12px]">
+            E-mail: E.aabd26@naver.com
+          </span>
+
+          <span className="xl:my-0 my-[12px] font-bold hidden xl:block">|</span>
 
           <span className="mx-[20px] xl:my-0 my-[12px]">
             주소: 경기도 화성시 수노을중앙로 142 센타프라자 507호
