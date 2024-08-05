@@ -43,10 +43,10 @@ const Introduce: React.FC = () => {
       <section className="flex flex-col justify-start items-center w-[85%] mt-[64px] mb-[64px]">
         <div className="flex flex-col justify-start items-cneter">
           <div className="flex flex-col justify-start items-center mb-[60px] text-black text-center leading-10 lg:leading-none break-keep">
-            <div className="text-[32px] font-bold mb-[32px]">
+            <div className="text-[40px] lg:text-[32px] font-bold mb-[32px]">
               안녕하십니까. 현대소방입니다.
             </div>
-            <div className="flex flex-col justify-start items-center text-[16px] my-[24px]">
+            <div className="flex flex-col justify-start items-center text-[28px] lg:text-[16px] my-[24px]">
               <div className="lg:my-[8px]">
                 안전을 키워드로 더 나은 미래를 준비하는 현대소방입니다.
               </div>
@@ -57,7 +57,7 @@ const Introduce: React.FC = () => {
                 우수한 전문성과 철저한 안전 관리를 바탕으로 운영하고 있습니다.
               </div>
             </div>
-            <div className="flex flex-col justify-start items-center text-[16px] my-[24px]">
+            <div className="flex flex-col justify-start items-center text-[28px] lg:text-[16px] my-[24px]">
               <div className="lg:my-[8px]">
                 발전된 기술과 안전의 중요성을 끊임없이 모색하며,
               </div>
@@ -71,7 +71,7 @@ const Introduce: React.FC = () => {
                 환경에 맞는 최적의 소방 안전 솔루션을 찾아드립니다.
               </div>
             </div>
-            <div className="flex flex-col justify-start items-center text-[16px] my-[24px]">
+            <div className="flex flex-col justify-start items-center text-[28px] lg:text-[16px] my-[24px]">
               <div className="lg:my-[8px]">
                 저희의 비전은 고객이 안전을 확보하고
               </div>
@@ -94,7 +94,7 @@ const Introduce: React.FC = () => {
                 할 것을 약속드립니다.
               </div>
             </div>
-            <div className="flex flex-col justify-start items-center text-[16px] my-[24px]">
+            <div className="flex flex-col justify-start items-center text-[28px] lg:text-[16px] my-[24px]">
               <div className="lg:my-[8px]">현대소방의 일원으로서,</div>
               <div className="lg:my-[8px]">
                 안전을 향해 함께 나아가는 여정에 여러분이 함께해 주셨으면
@@ -107,7 +107,7 @@ const Introduce: React.FC = () => {
                 이루어 나가는 데 최선을 다하겠습니다.
               </div>
             </div>
-            <div className="flex flex-col justify-start items-center text-[16px] my-[24px]">
+            <div className="flex flex-col justify-start items-center text-[28px] lg:text-[16px] my-[24px]">
               <div className="lg:my-[8px]">감사합니다.</div>
               <div className="lg:my-[8px] font-bold">현대소방 드림</div>
             </div>

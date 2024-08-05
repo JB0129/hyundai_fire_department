@@ -52,7 +52,11 @@ const Header: React.FC = () => {
         to={"/"}
         className="flex justify-center items-center w-full max-w-[380px]"
       >
-        <img src="/Logo_Large.png" alt="logo" className="lg:w-[166px] w-[250px]" />
+        <img
+          src="/Logo_Large.png"
+          alt="logo"
+          className="lg:w-[166px] w-[250px]"
+        />
       </Link>
       <nav
         id="Navigation"
@@ -108,7 +112,7 @@ const Header: React.FC = () => {
       </button>
       {isMenu && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-[rgb(0,0,0,0)] z-50 xl:hidden"
+          className="fixed top-0 left-0 w-full h-full bg-[rgba(61,61,61,0.81)] z-50 xl:hidden"
           onClick={() => {
             setMenu(false);
             setSubMenu("");
@@ -214,7 +218,7 @@ const Header: React.FC = () => {
             >
               <span>오시는길</span>
             </button>
-            <div className="flex justify-center items-end w-full h-full py-[40px]">
+            <div className="flex justify-center items-start w-full py-[40px]">
               <img
                 src="/Ring_icon.png"
                 alt="전화걸기"
