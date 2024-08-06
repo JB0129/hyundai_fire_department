@@ -222,7 +222,7 @@ const Header: React.FC = () => {
               <img
                 src="/Ring_icon.png"
                 alt="전화걸기"
-                className="w-[72px] h-[72px] mx-[12px] cursor-pointer"
+                className="w-[144px] lg:w-[72px] h-[144px] lg:h-[72px] mx-[12px] cursor-pointer"
                 onClick={() => {
                   document.location.href = "tel:010-3153-7503";
                 }}
@@ -230,13 +230,13 @@ const Header: React.FC = () => {
               <img
                 src="/Kakao_icon.png"
                 alt="오픈 카카오톡"
-                className="w-[72px] h-[72px] mx-[12px] cursor-pointer"
+                className="w-[144px] lg:w-[72px] h-[144px] lg:h-[72px] mx-[12px] cursor-pointer"
                 onClick={() => window.open("https://open.kakao.com/o/so0efoeg")}
               />
               <img
                 src="/Blog_icon.png"
                 alt="네이버 블로그"
-                className="w-[72px] h-[72px] mx-[12px] cursor-pointer"
+                className="w-[144px] lg:w-[72px] h-[144px] lg:h-[72px] mx-[12px] cursor-pointer"
                 onClick={() => window.open("https://blog.naver.com/aabd95")}
               />
             </div>
