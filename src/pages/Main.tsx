@@ -292,31 +292,29 @@ const Main: React.FC = () => {
       </div>
 
       <div className="hidden fixed bottom-[24px] right-[24px] xl:flex flex-col justify-end items-center">
-        {more && (
-          <>
-            <img
-              src="/Ring_icon.png"
-              alt="전화걸기"
-              className="w-[72px] h-[72px] my-[8px] cursor-pointer"
-              onClick={() => {
-                document.location.href = "tel:010-3153-7503";
-              }}
-            />
-            <img
-              src="/Kakao_icon.png"
-              alt="오픈 카카오톡"
-              className="w-[72px] h-[72px] my-[8px] cursor-pointer"
-              onClick={() => window.open("https://open.kakao.com/o/so0efoeg")}
-            />
-            <img
-              src="/Blog_icon.png"
-              alt="네이버 블로그"
-              className="w-[72px] h-[72px] my-[8px] cursor-pointer"
-              onClick={() => window.open("https://blog.naver.com/aabd95")}
-            />
-          </>
-        )}
-        <button
+        <>
+          <img
+            src="/Ring_icon.png"
+            alt="전화걸기"
+            className="w-[72px] h-[72px] my-[8px] cursor-pointer"
+            onClick={() => {
+              document.location.href = "tel:010-3153-7503";
+            }}
+          />
+          <img
+            src="/Kakao_icon.png"
+            alt="오픈 카카오톡"
+            className="w-[72px] h-[72px] my-[8px] cursor-pointer"
+            onClick={() => window.open("https://open.kakao.com/o/so0efoeg")}
+          />
+          <img
+            src="/Blog_icon.png"
+            alt="네이버 블로그"
+            className="w-[72px] h-[72px] my-[8px] cursor-pointer"
+            onClick={() => window.open("https://blog.naver.com/aabd95")}
+          />
+        </>
+        {/* <button
           onClick={() => setMore(!more)}
           className="flex justify-center items-center w-[72px] h-[72px] rounded-full bg-partner"
         >
@@ -325,7 +323,7 @@ const Main: React.FC = () => {
           ) : (
             <span className="text-white text-[32px] rotate-45">&times;</span>
           )}
-        </button>
+        </button> */}
       </div>
     </main>
   );
