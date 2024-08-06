@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-footer flex justify-center items-center w-full xl:h-[200px] mt-[60px] py-[64px] xl:p-0">
+    <footer className="bg-footer flex justify-center items-center w-full xl:h-[200px] mt-[60px] py-[64px] xl:p-0 text-[36px] lg:text-[16px]">
       <div className="flex flex-col justify-center items-center text-white">
         <div className="flex flex-col justify-start items-start xl:flex-row xl:items-center mb-[32px]">
           <span className="mx-[20px] xl:my-0 my-[12px]">대표자: 이동훈</span>

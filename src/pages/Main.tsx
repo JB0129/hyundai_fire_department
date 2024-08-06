@@ -314,16 +314,6 @@ const Main: React.FC = () => {
             onClick={() => window.open("https://blog.naver.com/aabd95")}
           />
         </>
-        {/* <button
-          onClick={() => setMore(!more)}
-          className="flex justify-center items-center w-[72px] h-[72px] rounded-full bg-partner"
-        >
-          {more ? (
-            <span className="text-white text-[36px]">&times;</span>
-          ) : (
-            <span className="text-white text-[32px] rotate-45">&times;</span>
-          )}
-        </button> */}
       </div>
     </main>
   );
