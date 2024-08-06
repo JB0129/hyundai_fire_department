@@ -12,14 +12,17 @@ const Gallery: React.FC = () => {
   const closeModal = () => setLogin(!isLogin);
 
   const getGallery = () => {
-    return axios
-      .get(`http://34.127.89.168:8080/gallery/${id}`)
-      .then((res) => {
-        console.log(res.data);
-        setData(res.data.data);
-        setInfo(res.data.pageInfo);
-      })
-      .catch((err) => console.error(err));
+    return (
+      axios
+        // .get(`http://34.127.89.168:8080/gallery/${id}`)
+        .get(`http://localhost:8080/gallery/${id}`)
+        .then((res) => {
+          console.log(res.data);
+          setData(res.data.data);
+          setInfo(res.data.pageInfo);
+        })
+        .catch((err) => console.error(err))
+    );
   };
 
   useEffect(() => {
@@ -55,13 +58,13 @@ const Gallery: React.FC = () => {
             <div className="text-[12px]">{isData.createdate}</div>
           </div>
           <div className="w-full my-[20px] px-[24px]">{isData.contents}</div>
-          <ul className="flex flex-col justify-start items-center">
+          <ul className="flex flex-col justify-start items-center w-[875px]">
             {isData.images?.map((img: any, idx: number) => (
               <li key={idx} className="m-[24px]">
                 <img
                   src={img}
                   alt="시공 이미지"
-                  className="w-[875px] h-[432px] bg-no-repeat bg-cover"
+                  className="w-full bg-contain bg-center bg-no-repeat"
                 />
               </li>
             ))}

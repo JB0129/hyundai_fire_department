@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
+import MoreBtn from "./component/More";
 import Main from "./pages/Main";
 import Introduce from "./pages/Introduce";
 import License from "./pages/License";
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       <>
         <Header />
         <Outlet />
+        <MoreBtn />
         <Footer />
       </>
     ),

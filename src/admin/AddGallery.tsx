@@ -4,13 +4,20 @@ import { useNavigate } from "react-router-dom";
 
 const AddGallery: React.FC = () => {
   const navigate = useNavigate();
+  // 제목
   const [title, setTitle] = useState<string>("");
+
+  // 내용
   const [contents, setContents] = useState<string>("");
 
-  const [imgFile, setImgFile] = useState<string[]>([]);
-
+  // 이미지 input 값
   const [imgUrl, setImgUrl] = useState<string>("");
+  const handleChangeUrl = (e: any) => {
+    setImgUrl(e.currentTarget.value);
+  };
 
+  // 이미지 []
+  const [imgFile, setImgFile] = useState<string[]>([]);
   const handleAddImg = () => {
     if (imgUrl !== "") {
       setImgFile((imgFile) => [...imgFile, imgUrl]);
@@ -29,29 +36,28 @@ const AddGallery: React.FC = () => {
     setImgFile(filtered);
   };
 
-  const handleChangeUrl = (e: any) => {
-    setImgUrl(e.currentTarget.value);
-  };
-
   const postGallery = () => {
     if (title === "") return alert("제목을 입력해주세요");
-    if (imgFile.length === 0) return alert("이미지 링크를 1개 이상 첨부해주세요");
     if (contents === "") return alert("내용을 입력해주세요");
+    if (imgFile.length < 1) return alert("이미지 링크를 1개 이상 첨부해주세요");
 
-    return axios
-      .post("http://34.127.89.168:8080/gallery", {
-        title,
-        contents,
-        image: imgFile,
-      })
-      .then((res) => {
-        // console.log(res.data);
-        alert("성공적으로 업로드가 되었습니다.");
-        navigate("/gallery");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    return (
+      axios
+        // .post("http://34.127.89.168:8080/gallery", {
+        .post("http://localhost:8080/gallery", {
+          title,
+          contents,
+          images: imgFile,
+        })
+        .then((res) => {
+          console.log(res);
+          alert("성공적으로 업로드가 되었습니다.");
+          navigate("/gallery");
+        })
+        .catch((err) => {
+          console.log(err);
+        })
+    );
   };
 
   return (
@@ -114,7 +120,7 @@ const AddGallery: React.FC = () => {
                 <img
                   src={imgUrl}
                   alt={`업로드 이미지 ${idx}`}
-                  className="w-[600px] aspect-[875/432] mb-[10px] border border-solid border-slate-200"
+                  className="w-[600px] aspect-[875/432] mb-[10px] bg-contain bg-center bg-no-repeat border border-solid border-slate-200"
                 />
               </div>
             ))}

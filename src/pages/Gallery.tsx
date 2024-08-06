@@ -14,14 +14,17 @@ const Gallery: React.FC = () => {
   const [totalPage, setTotalPage] = useState<number>(1);
 
   const getGallerys = () => {
-    return axios
-      .get(`http://34.127.89.168:8080/gallery?page=${isPage}`)
-      .then((res) => {
-        console.log(res.data);
-        setData(res.data.data);
-        setTotalPage(res.data.totalPage);
-      })
-      .catch((err) => console.error(err));
+    return (
+      axios
+        // .get(`http://34.127.89.168:8080/gallery?page=${isPage}`)
+        .get(`http://localhost:8080/gallery?page=${isPage}`)
+        .then((res) => {
+          console.log(res.data);
+          setData(res.data.data);
+          setTotalPage(res.data.totalPage);
+        })
+        .catch((err) => console.error(err))
+    );
   };
 
   useEffect(() => {
