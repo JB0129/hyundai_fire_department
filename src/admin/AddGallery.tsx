@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AddGallery: React.FC = () => {
@@ -11,6 +11,7 @@ const AddGallery: React.FC = () => {
   const [contents, setContents] = useState<string>("");
 
   // 이미지 input 값
+  const imgRef = useRef<any>();
   const [imgUrl, setImgUrl] = useState<string>("");
   const handleChangeUrl = (e: any) => {
     setImgUrl(e.currentTarget.value);
@@ -24,6 +25,8 @@ const AddGallery: React.FC = () => {
     }
     setImgUrl("");
   };
+
+  console.log(imgFile);
 
   const handleEnter = (e: any) => {
     if (e.key === "Enter") {
@@ -41,13 +44,17 @@ const AddGallery: React.FC = () => {
     if (contents === "") return alert("내용을 입력해주세요");
     if (imgFile.length < 1) return alert("이미지 링크를 1개 이상 첨부해주세요");
 
+    const postData = {
+      title,
+      contents,
+      images: imgFile,
+    };
+
+    console.log(postData);
+
     return axios
-      .post("http://34.127.89.168:8080/gallery", {
-        // .post("http://localhost:8080/gallery", {
-        title,
-        contents,
-        images: imgFile,
-      })
+      // .post("http://34.127.89.168:8080/gallery", postData)
+      .post("http://34.19.83.219:8080/gallery", postData)
       .then((res) => {
         console.log(res);
         alert("성공적으로 업로드가 되었습니다.");
@@ -92,6 +99,7 @@ const AddGallery: React.FC = () => {
             <input
               id="imgUrl"
               type="text"
+              ref={imgRef}
               value={imgUrl}
               onChange={handleChangeUrl}
               onKeyDown={handleEnter}

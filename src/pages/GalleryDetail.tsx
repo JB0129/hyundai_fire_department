@@ -14,8 +14,8 @@ const Gallery: React.FC = () => {
   const getGallery = () => {
     return (
       axios
-        .get(`http://34.127.89.168:8080/gallery/${id}`)
-        // .get(`http://localhost:8080/gallery/${id}`)
+        // .get(`http://34.127.89.168:8080/gallery/${id}`)
+        .get(`http://34.19.83.219:8080/gallery/${id}`)
         .then((res) => {
           console.log(res.data);
           setData(res.data.data);
@@ -31,7 +31,8 @@ const Gallery: React.FC = () => {
 
   const deleteGallery = () => {
     return axios
-      .delete(`http://34.127.89.168:8080/gallery/${id}`)
+      // .delete(`http://34.127.89.168:8080/gallery/${id}`)
+      .delete(`http://34.19.83.219:8080/gallery/${id}`)
       .then((res) => {
         console.log(res.data);
         alert("해당 글이 삭제되었습니다.");
