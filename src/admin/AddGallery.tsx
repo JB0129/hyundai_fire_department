@@ -41,23 +41,21 @@ const AddGallery: React.FC = () => {
     if (contents === "") return alert("내용을 입력해주세요");
     if (imgFile.length < 1) return alert("이미지 링크를 1개 이상 첨부해주세요");
 
-    return (
-      axios
-        // .post("http://34.127.89.168:8080/gallery", {
-        .post("http://localhost:8080/gallery", {
-          title,
-          contents,
-          images: imgFile,
-        })
-        .then((res) => {
-          console.log(res);
-          alert("성공적으로 업로드가 되었습니다.");
-          navigate("/gallery");
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-    );
+    return axios
+      .post("http://34.127.89.168:8080/gallery", {
+        // .post("http://localhost:8080/gallery", {
+        title,
+        contents,
+        images: imgFile,
+      })
+      .then((res) => {
+        console.log(res);
+        alert("성공적으로 업로드가 되었습니다.");
+        navigate("/gallery");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
